@@ -1,0 +1,30 @@
+table {
+  width: 100%;
+  margin-bottom: 1rem;
+  border-collapse: collapse;
+}
+
+td,
+th {
+  padding: 10px;
+}
+
+.table-content thead th {
+  border: 1px solid;
+  text-align: center;
+}
+
+.col {
+  border: 1px solid;
+  height: 345px;
+  vertical-align: baseline;
+}
+
+.first-col {
+  width: 50%;
+}
+
+.table-total td {
+  border: 1px solid;
+  text-align: center;
+}

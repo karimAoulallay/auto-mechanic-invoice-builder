@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PDF</title>
+    <link rel="stylesheet" href="css/pdf.css" />
+    <link rel="stylesheet" href="css/pdf-table.css" />
+  </head>
+
+  <body>
+    <div class="header">
+      <h1>{{enterpriseName}}</h1>
+      <p>Travaus d'entretien maintenance et reparation des voitures</p>
+    </div>
+    <div>
+      <div class="client-info">
+        <p>Client: {{clientName}}</p>
+        <p>ICE: {{clientIce}}</p>
+        <p>Matricule: {{serialNumber}}</p>
+      </div>
+      <div class="date">
+        <p>Date: {{invoiceDate}}</p>
+        <p>N° facture: {{invoiceNumber}}</p>
+      </div>
+      <span class="clear"></span>
+    </div>
+
+    <!-- table content -->
+    <table class="table-content">
+      <thead>
+        <tr>
+          <th class="first-col">Description</th>
+          <th>Quantite</th>
+          <th>Prix unitaire</th>
+          <th>Montant</th>
+        </tr>
+      </thead>
+      <tbody>
+        <td class="col first-col">{{names}}</td>
+        <td class="col">{{quantities}}</td>
+        <td class="col">{{prices}}</td>
+        <td class="col">{{sums}}</td>
+      </tbody>
+    </table>
+    <!-- table total price -->
+    <table class="table-total">
+      <tr>
+        <td>Montant en dirhams (hors taxe)</td>
+        <td>{{total}}</td>
+      </tr>
+      <tr>
+        <td>TVA 20%</td>
+        <td>{{tva}}</td>
+      </tr>
+      <tr>
+        <td>TOTAL T.T.C</td>
+        <td><{{total-ttc}}</td>
+      </tr>
+    </table>
+    <div>
+      <p class="signature">Signature:</p>
+      <div class="clear"></div>
+    </div>
+    <hr />
+    <div class="footer">
+      <p>
+        Adresse : {{enterpriseAddress}} - RC : {{enterpriseRc}} - IF :
+        {{enterpriseIf}} - CNSS : {{enterpriseCnss}} - ICE : {{enterpriseIce}} -
+        TP : {{enterpriseTp}} - Télephone : {{enterpriseTel}}
+      </p>
+    </div>
+  </body>
+</html>
